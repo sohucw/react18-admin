@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /secret
+
+
+# robot 机器的意思：  搜索引擎的爬虫   配置 想让搜索引擎搜索我们的项目
