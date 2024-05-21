@@ -54,3 +54,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 "prettier" // 添加这一行 使用prettier的规则去覆盖eslint的一部分规则
 ]
 },
+
+hint: The '.husky/commit-msg' hook was ignored because it's not set as executable.
+hint: You can disable this warning with `git config advice.ignoredHook false`.
+
+- https://blog.csdn.net/u011019141/article/details/126514914
