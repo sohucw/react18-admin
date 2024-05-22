@@ -1,20 +1,5 @@
-import React, { useEffect, useState } from "react";
-export const Search = () => {
-    const [param, setParam] = useState({
-        name: "",
-        personId: "",
-    });
-    const [users, setUsers] = useState([]);
-    const [list, setList] = useState([]);
-    // 参数变化的时候 获取用户列表
-    useEffect(() => {
-        fetch("")
-            .then((res) => res.json())
-            .then((data) => {
-                setUsers(data);
-            });
-    }, [param]);
-
+import React from "react";
+export const Search = ({ users, param, setParam }) => {
     // setParam(Object.assign(param, {name: "test"}))
     return (
         <form>
@@ -40,7 +25,7 @@ export const Search = () => {
                 <option value={""}>请选择</option>
                 {users.map((item, index) => {
                     return (
-                        <option key={index} value={item.id}>
+                        <option key={item.id} value={item.id}>
                             {item.name}
                         </option>
                     );
