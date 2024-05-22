@@ -58,4 +58,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 hint: The '.husky/commit-msg' hook was ignored because it's not set as executable.
 hint: You can disable this warning with `git config advice.ignoredHook false`.
 
-- https://blog.csdn.net/u011019141/article/details/126514914
+-   https://blog.csdn.net/u011019141/article/details/126514914
+
+commitlit husky配置  
+https://juejin.cn/post/7007298174675058724
+https://juejin.cn/post/7065214346263019556
