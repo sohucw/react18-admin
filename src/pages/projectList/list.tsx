@@ -1,5 +1,16 @@
 import React from "react";
-export const List = ({ list, users }) => {
+import { IUser } from "./search";
+interface IProject {
+    id: string;
+    name: string;
+    personId: string;
+    organization: string;
+}
+interface ListProps {
+    list: IProject[];
+    users: IUser[];
+}
+export const List = ({ list, users }: ListProps) => {
     return (
         <div>
             <table>

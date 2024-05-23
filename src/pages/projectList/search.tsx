@@ -1,5 +1,18 @@
 import React from "react";
-export const Search = ({ users, param, setParam }) => {
+
+export interface IUser {
+    id: string;
+    name: string;
+}
+interface ISearchProps {
+    users: IUser[];
+    param: {
+        name: string;
+        personId: string;
+    };
+    setParam: (param: ISearchProps["param"]) => void;
+}
+export const Search = ({ users, param, setParam }: ISearchProps) => {
     // setParam(Object.assign(param, {name: "test"}))
     return (
         <form>
