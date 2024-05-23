@@ -3,6 +3,7 @@ import React from "react";
 export interface IUser {
     id: string;
     name: string;
+    token: string;
 }
 interface ISearchProps {
     users: IUser[];
