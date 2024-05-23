@@ -21,7 +21,8 @@ export const useMount = (fn: () => void) => {
     }, []);
 };
 
-export const useDebounce = (value: any, delay?: number) => {
+// 后面用泛型来规范类型？？？？
+export const useDebounce = <V>(value: V, delay?: number) => {
     const [debounceValue, setDebounceValue] = useState(value);
     useEffect(() => {
         // 每次value改变的时候， 重新设置 定时器， debounceValue
