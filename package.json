@@ -24,7 +24,7 @@
         "eject": "react-scripts eject",
         "prepare": "husky install",
         "commitlint": "commitlint --edit",
-        "json-server": "json-server __mock_data/db.json --watch --port 3001 --middlewares ./__mock_data/middleware.js"
+        "json-server": "json-server __mock_data/db.json --watch --port 3001 --middlewares __mock_data/middleware.js"
     },
     "eslintConfig": {
         "extends": [

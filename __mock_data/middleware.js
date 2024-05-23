@@ -1,5 +1,7 @@
 module.exports = (req, res, next) => {
-    if (req.mothod === "POST" && req.pah === "/login") {
+    console.log(req.method, req.url);
+    if (req.method === "POST" && req.url === "/login") {
+        console.log(33);
         if (req.body.username === "dawei" && req.body.password === "123") {
             return res.status(200).json({
                 code: 200,
