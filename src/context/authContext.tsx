@@ -13,6 +13,7 @@ const AuthContext = React.createContext<
           login: (form: AuthForm) => Promise<void>;
           register: (form: AuthForm) => Promise<void>;
           logout: () => Promise<void>;
+          test: () => void;
       }
     | undefined
 >(undefined);
@@ -34,13 +35,20 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
                 throw error;
             });
     const register = (form: AuthForm) =>
-        auth.register(form).then((user) => setUser(user));
-    const logout = () => auth.logout().then(() => setUser(null));
+        auth.register(form).then((user) => {
+            console.log("注册成功", user.token);
+            window.localStorage.setItem("token", user.token);
+            setUser(user);
+        });
+    const logout = () => auth.logout();
 
+    const test = () => {
+        console.log("测试-----", user);
+    };
     return (
         <AuthContext.Provider
             children={children}
-            value={{ user, login, register, logout }}
+            value={{ user, login, register, logout, test }}
         />
     );
 };

@@ -1,13 +1,15 @@
 import React from "react";
-// import logo from "./logo.svg";
 import "./App.css";
-import { ProjectList } from "./pages/projectList";
-import { Login } from "./pages/login";
+import { useAuth } from "./context/authContext";
+import { AuthenticatedApp } from "./authenticated-app";
+import { UnauthenticatedApp } from "./unauthenticated-app";
 function App() {
+    const { user } = useAuth();
+    const token = window.localStorage.getItem("token");
+
     return (
         <div className="App">
-            {/* <ProjectList></ProjectList> */}
-            <Login></Login>
+            {token ? <AuthenticatedApp /> : <UnauthenticatedApp />}
         </div>
     );
 }

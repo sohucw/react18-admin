@@ -1,7 +1,7 @@
 import React, { FormEvent } from "react";
 import { useAuth } from "../../context/authContext";
 export const Register = () => {
-    const { register, user } = useAuth();
+    const { register, test } = useAuth();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -10,6 +10,7 @@ export const Register = () => {
         console.log(username, password);
         // 登录成功后，跳转到首页
         register({ username, password });
+        test();
     };
     return (
         <form onSubmit={handleSubmit}>
