@@ -53,6 +53,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
 };
 
+// const bootstrapUser = async () => {
+//     let user = null;
+//     const token = window.localStorage.getItem("token");
+//     if (!token) {
+//         const user = await http('me', {token})
+//     }
+// };
+
 export const useAuth = () => {
     const context = React.useContext(AuthContext);
     if (!context) {

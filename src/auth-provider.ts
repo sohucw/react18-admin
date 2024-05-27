@@ -8,6 +8,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 export const getToken = () => window.localStorage.getItem(localStorageKey);
 
 export const handleUserResponse = (user: IUser) => {
+    debugger;
     window.localStorage.setItem(localStorageKey, user.token || "");
     return user;
 };
