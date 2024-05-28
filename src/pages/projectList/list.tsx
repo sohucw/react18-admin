@@ -1,5 +1,7 @@
 import React from "react";
 import { IUser } from "./search";
+import { Table } from "antd";
+import { title } from "process";
 interface IProject {
     id: string;
     name: string;
@@ -12,27 +14,28 @@ interface ListProps {
 }
 export const List = ({ list, users }: ListProps) => {
     return (
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>name</th>
-                        <th>ower</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {list.map((item, index) => (
-                        <tr key={item.id}>
-                            <td>{item.name}</td>
-                            {/* <td>{item.owerName}</td> */}
-                            <td>
-                                {users.find((user) => user.id === item.personId)
-                                    ?.name || "未知"}
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+        <Table
+            pagination={false}
+            columns={[
+                {
+                    title: "名称",
+                    dataIndex: "name",
+                    sorter: (a, b) => a.name.localeCompare(b.name),
+                },
+                {
+                    title: "项目负责人",
+                    render(value, project) {
+                        return (
+                            <span>
+                                {users.find(
+                                    (user) => user.id === project.personId,
+                                )?.name || "未知"}
+                            </span>
+                        );
+                    },
+                },
+            ]}
+            dataSource={list}
+        ></Table>
     );
 };
