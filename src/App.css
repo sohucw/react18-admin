@@ -1,9 +1,9 @@
+/* 使用相对单位 rem是相对于跟元素html的font-size    em是相对父元素的 font-size */
 html {
-    font-size: 62.5%; /* 使用相对单位 rem是相对于跟元素html的font-size    em是相对父元素的 font-size */
+    font-size: 62.5%;
 }
-/* 浏览器默认 16px       16*62.5% = 10px     比如ui给的 200px  换成rem就是 20rem*/
-
+/* 浏览器默认 16px   16*62.5% = 10px     比如ui给的 200px  换成rem就是 20rem*/
 html body #root .App {
-    /* viewport height = vh */
+    /* viewport height = vh   撑满整个视口 */
     min-height: 100vh;
 }

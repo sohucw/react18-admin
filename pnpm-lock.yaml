@@ -41,6 +41,9 @@ importers:
       craco-less:
         specifier: ^3.0.1
         version: 3.0.1(@craco/craco@7.1.0(@types/node@16.18.97)(postcss@8.4.38)(react-scripts@5.0.1(@babel/plugin-syntax-flow@7.24.1(@babel/core@7.24.5))(@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.24.5))(@types/babel__core@7.20.5)(eslint@8.57.0)(react@18.3.1)(ts-node@10.9.2(@types/node@16.18.97)(typescript@4.9.5))(type-fest@3.13.1)(typescript@4.9.5))(typescript@4.9.5))(react-scripts@5.0.1(@babel/plugin-syntax-flow@7.24.1(@babel/core@7.24.5))(@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.24.5))(@types/babel__core@7.20.5)(eslint@8.57.0)(react@18.3.1)(ts-node@10.9.2(@types/node@16.18.97)(typescript@4.9.5))(type-fest@3.13.1)(typescript@4.9.5))(webpack@5.91.0)
+      dayjs:
+        specifier: ^1.11.11
+        version: 1.11.11
       qs:
         specifier: ^6.12.1
         version: 6.12.1
